@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_shopping_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_shopping_list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_shopping_cart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/shopping_list_id_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/id"
+            android:textColor="@color/purple"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toRightOf="@id/image_shopping_list"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/shopping_list_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/shopping_list_id_text_view"
+            android:textColor="@color/purple"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toRightOf="@id/shopping_list_id_text_view"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/shopping_list_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/name"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toRightOf="@id/image_shopping_list"
+            app:layout_constraintTop_toTopOf="@id/shopping_list_id_text_view" />
+
+        <TextView
+            android:id="@+id/shopping_list_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintLeft_toRightOf="@id/shopping_list_name_text_view"
+            app:layout_constraintTop_toTopOf="@id/shopping_list_id" />
+
+        <ImageButton
+            android:id="@+id/button_delete_shopping_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/transparent"
+            android:contentDescription="@string/delete_shopping_list"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/button_edit_content_shopping_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/transparent"
+            android:contentDescription="@string/edit_content_of_shopping_list"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintRight_toLeftOf="@id/button_delete_shopping_list"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/shopping_list_status_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/image_shopping_list"
+            app:layout_constraintTop_toTopOf="@id/shopping_list_name_text_view"/>
+
+        <TextView
+            android:id="@+id/status_shopping_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/shopping_list_status_text_view"
+            app:layout_constraintTop_toTopOf="@id/shopping_list_name"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
